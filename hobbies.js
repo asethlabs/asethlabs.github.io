@@ -18,6 +18,10 @@
       : (h.updates || []).map(u => ({ u, h }))
     ).sort(byDate);
 
+    // A hobby gets a map when any update (or extra visit) names a place.
+    const hasMap = h => h !== ALL && typeof window.renderTravelMap === 'function' &&
+      (h.updates || []).concat(h.visits || []).some(u => u.places || u.place);
+
     function mediaHtml(list) {
       const items = (list || []).map(m => typeof m === 'string' ? { src: m } : m).filter(m => m && m.src);
       if (!items.length) return '';
@@ -64,6 +68,7 @@
           (h.since ? '<div class="since">' + esc(h.since) + '</div>' : '') + '</div></div>' +
         '<p class="about">' + esc(h.about) + '</p>' +
         (h.now ? '<div class="now"><b>CURRENTLY</b>' + esc(h.now) + '</div>' : '') +
+        (hasMap(h) ? '<div class="updates-title">// where I\'ve been</div><div class="tmap"></div>' : '') +
         '<div class="updates-title">// ' + (h === ALL ? 'feed' : 'updates') + '</div>' +
         (posts.length
           ? '<ul class="updates">' + posts.map(({ u, h: src }) =>
@@ -72,6 +77,7 @@
               (u.title ? '<span class="t">' + esc(u.title) + '</span><br>' : '') +
               esc(u.text || '') + mediaHtml(u.media) + '</li>').join('') + '</ul>'
           : '<p class="empty">No updates yet. Check back soon.</p>');
+      if (hasMap(h)) window.renderTravelMap(panel.querySelector('.tmap'), h, typeof PLACES !== 'undefined' ? PLACES : {});
       panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = '';
       if (user) { try { localStorage.setItem('hobby-tab', h.id); } catch (e) {} }
     }

@@ -15,7 +15,20 @@
        Photos: .jpg/.png/.webp, Videos: .mp4/.webm/.mov.
        alt and caption are optional; poster sets a video's cover image.
      The "All" tab is built automatically from every hobby's updates.
+
+     TRAVEL MAP: give a travel update `places: ["City, ST"]` and it shows
+     on the map; spots glow hotter the more trips include them. Each place
+     needs coordinates in PLACES below (look them up once, reuse forever).
+     For trips without a post, add them to the Travel hobby's `visits`:
+         visits: [ { date: "2025-07-04", places: ["Austin, TX"] } ]
      ============================================================ */
+const PLACES = {
+    "San Francisco, CA": [37.7749, -122.4194],
+    "Napa, CA":          [38.2975, -122.2869],
+    "Atlanta, GA":       [33.7490, -84.3880],
+    "Chicago, IL":       [41.8781, -87.6298],
+    "New York, NY":      [40.7128, -74.0060]
+  };
 const HOBBIES = [
     {
       id: "lifting", name: "Lifting", since: "",
@@ -42,24 +55,25 @@ const HOBBIES = [
       icon: '<svg viewBox="0 0 48 48"><path d="M44 8 L4 22 L18 27 L22 42 L29 31 L38 36 Z"/></svg>',
       about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
       now: "",
+      visits: [],
       updates: [
-        { date: "2026-04-15", title: "New York City", text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
+        { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
           media: [
             { src: "media/travel/nyc-birthday-dinner.jpg", alt: "Birthday dinner at an Italian restaurant: a plate of tiramisu and pastries with a big sparkler, held up with a huge smile" },
             { src: "media/travel/nyc-coconut-cake.jpg", alt: "A homemade coconut cake with white frosting, shredded coconut, blueberries and gold candles" }
           ] },
-        { date: "2026-03-15", title: "Chicago", text: "Went to Chicago for St. Patrick's. Saw lots of my friends from high school, college and post-grad life. Also visited Rush Med School because my friend got in and is considering going!! I also successfully thrifted for the first time in Chi.",
+        { date: "2026-03-15", title: "Chicago", places: ["Chicago, IL"], text: "Went to Chicago for St. Patrick's. Saw lots of my friends from high school, college and post-grad life. Also visited Rush Med School because my friend got in and is considering going!! I also successfully thrifted for the first time in Chi.",
           media: [
             { src: "media/travel/chicago-bean.jpg", alt: "Crowds around the Bean in Millennium Park under a bright blue sky, with downtown towers behind it" },
             { src: "media/travel/chicago-rush.jpg", alt: "The Rush hospital tower on a sunny day, seen from the corner of Paulina Street" },
             { src: "media/travel/chicago-thrift-jersey.jpg", alt: "A thrifted black, white and red Chicago Bulls Nike shirt on a hanger" },
             { src: "media/travel/chicago-skyline.jpg", alt: "View from high above downtown Chicago looking north, with the river dyed green below and Lake Michigan on the right" }
           ] },
-        { date: "2026-02-28", title: "Atlanta", text: "Went to ATL to visit family.",
+        { date: "2026-02-28", title: "Atlanta", places: ["Atlanta, GA"], text: "Went to ATL to visit family.",
           media: [
             { src: "media/travel/atlanta-cafe.jpg", alt: "A café table with a latte topped with rose petals, a berry tart, a sesame bagel with cream cheese and a slice of pistachio roll cake" }
           ] },
-        { date: "2026-02-15", title: "San Francisco & Napa", text: "Went to SF and saw Napa. Highlights: wine tasting with friends, trying Shizen (a 100% vegetarian restaurant), the best pastries in the US at Butter & Crumble, and riding in a Waymo for the first time.",
+        { date: "2026-02-15", title: "San Francisco & Napa", places: ["San Francisco, CA", "Napa, CA"], text: "Went to SF and saw Napa. Highlights: wine tasting with friends, trying Shizen (a 100% vegetarian restaurant), the best pastries in the US at Butter & Crumble, and riding in a Waymo for the first time.",
           media: [
             { src: "media/travel/napa-ruvango.jpg", alt: "Two glasses of red wine on a barrel on a winery porch, looking out over rows of vines and green hills in Napa" },
             { src: "media/travel/shizen-sushi.jpg", alt: "A vegetarian sushi roll topped with avocado and a flame at the end of the plate at Shizen" },
