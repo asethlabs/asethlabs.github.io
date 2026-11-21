@@ -43,7 +43,12 @@ const HOBBIES = [
       about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
       now: "",
       updates: [
-        { date: "2026-02-15", title: "San Francisco & Napa", text: "Went to SF and saw Napa. Highlights: wine tasting with friends, trying Shizen (a 100% vegetarian restaurant), the best pastries in the US at Butter & Crumble, and riding in a Waymo for the first time." }
+        { date: "2026-02-15", title: "San Francisco & Napa", text: "Went to SF and saw Napa. Highlights: wine tasting with friends, trying Shizen (a 100% vegetarian restaurant), the best pastries in the US at Butter & Crumble, and riding in a Waymo for the first time.",
+          media: [
+            { src: "media/travel/napa-ruvango.jpg", alt: "Two glasses of red wine on a barrel on a winery porch, looking out over rows of vines and green hills in Napa" },
+            { src: "media/travel/shizen-sushi.jpg", alt: "A vegetarian sushi roll topped with avocado and a flame at the end of the plate at Shizen" },
+            { src: "media/travel/butter-and-crumble.jpg", alt: "A box of pastries from Butter & Crumble: a raspberry almond pastry, a pistachio pastry and a croissant topped with chocolate cream and a strawberry" }
+          ] }
       ]
     },
     {
