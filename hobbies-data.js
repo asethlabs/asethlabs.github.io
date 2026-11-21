@@ -43,6 +43,10 @@ const HOBBIES = [
       about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
       now: "",
       updates: [
+        { date: "2026-02-28", title: "Atlanta", text: "Went to ATL to visit family.",
+          media: [
+            { src: "media/travel/atlanta-cafe.jpg", alt: "A café table with a latte topped with rose petals, a berry tart, a sesame bagel with cream cheese and a slice of pistachio roll cake" }
+          ] },
         { date: "2026-02-15", title: "San Francisco & Napa", text: "Went to SF and saw Napa. Highlights: wine tasting with friends, trying Shizen (a 100% vegetarian restaurant), the best pastries in the US at Butter & Crumble, and riding in a Waymo for the first time.",
           media: [
             { src: "media/travel/napa-ruvango.jpg", alt: "Two glasses of red wine on a barrel on a winery porch, looking out over rows of vines and green hills in Napa" },
