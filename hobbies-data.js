@@ -128,6 +128,8 @@ const HOBBIES = [
         { date: "2024-01-01", places: ["Sugar Mountain, NC"] },
         { date: "2023-12-01", places: ["Birmingham, AL"] },
         { date: "2023-11-01", places: ["Montego Bay, Jamaica"] },
+        { date: "2023-09-01", places: ["Birmingham, AL"] },
+        { date: "2023-09-01", places: ["New York, NY"] },
         { date: "2023-06-01", places: ["Miami, FL"] },
         { date: "2023-04-01", places: ["San Juan, Puerto Rico"] },
         { date: "2023-04-01", places: ["Oak Island, NC"] },
