@@ -32,7 +32,9 @@ const HOBBIES = [
       icon: '<svg viewBox="0 0 48 48"><path d="M44 8 L4 22 L18 27 L22 42 L29 31 L38 36 Z"/></svg>',
       about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
       now: "",
-      updates: []
+      updates: [
+        { date: "2026-02-15", title: "San Francisco & Napa", text: "Went to SF and saw Napa. Highlights: wine tasting with friends, trying Shizen (a 100% vegetarian restaurant), the best pastries in the US at Butter & Crumble, and riding in a Waymo for the first time." }
+      ]
     },
     {
       id: "music", name: "Music", since: "",
