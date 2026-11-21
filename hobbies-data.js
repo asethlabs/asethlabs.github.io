@@ -27,7 +27,20 @@ const PLACES = {
     "Napa, CA":          [38.2975, -122.2869],
     "Atlanta, GA":       [33.7490, -84.3880],
     "Chicago, IL":       [41.8781, -87.6298],
-    "New York, NY":      [40.7128, -74.0060]
+    "New York, NY":      [40.7128, -74.0060],
+    "Boston, MA":        [42.3601, -71.0589],
+    "Nashville, TN":     [36.1627, -86.7816],
+    "Miami, FL":         [25.7617, -80.1918],
+    "Florida":           [28.0, -81.7],
+    "Arizona":           [34.2, -111.7],
+    "San Diego, CA":     [32.7157, -117.1611],
+    "Olympic National Park, WA": [47.8021, -123.6044],
+    "Iceland":           [64.1466, -21.9426],
+    "Delhi, India":      [28.6139, 77.2090],
+    "Amritsar, India":   [31.6340, 74.8723],
+    "Rishikesh, India":  [30.0869, 78.2676],
+    "Uttar Pradesh, India":   [26.85, 80.95],
+    "Madhya Pradesh, India":  [23.5, 78.0]
   };
 const HOBBIES = [
     {
@@ -55,7 +68,18 @@ const HOBBIES = [
       icon: '<svg viewBox="0 0 48 48"><path d="M44 8 L4 22 L18 27 L22 42 L29 31 L38 36 Z"/></svg>',
       about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
       now: "",
-      visits: [],
+      visits: [
+        { date: "2025-12-01", places: ["Atlanta, GA", "New York, NY"] },
+        { date: "2025-11-01", places: ["Delhi, India", "Amritsar, India", "Uttar Pradesh, India", "Madhya Pradesh, India", "Rishikesh, India"] },
+        { date: "2025-09-01", places: ["Iceland"] },
+        { date: "2025-08-01", places: ["Miami, FL"] },
+        { date: "2025-07-01", places: ["Olympic National Park, WA"] },
+        { date: "2025-05-01", places: ["Arizona", "Atlanta, GA", "Florida"] },
+        { date: "2025-04-01", places: ["San Diego, CA"] },
+        { date: "2025-01-01", places: ["Boston, MA"] },
+        { date: "2024-12-01", places: ["Nashville, TN"] },
+        { date: "2024-10-01", places: ["New York, NY"] }
+      ],
       updates: [
         { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
           media: [

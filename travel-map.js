@@ -4,7 +4,6 @@
 (function () {
   const BASE = 'vendor/map/';
   const NS = 'http://www.w3.org/2000/svg';
-  const W = 800, H = 500;
   let ready = null;
 
   function loadScript(src) {
@@ -67,6 +66,8 @@
   }
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
+  const SHOW = 5;
+
   window.renderTravelMap = function (container, hobby, coords) {
     const places = tally(hobby, coords || {});
     if (!places.length) { container.remove(); return; }
@@ -78,17 +79,33 @@
         ' · <b>' + trips + '</b> ' + (trips === 1 ? 'trip' : 'trips') + '</div>' +
       '<div class="tmap-canvas"><p class="tmap-loading">Loading map…</p></div>' +
       '<div class="tmap-legend" aria-hidden="true"><span>fewer visits</span><i></i><span>more</span></div>' +
-      '<ul class="tmap-list">' + places.map(p =>
-        '<li><span class="tmap-dot" style="--heat:' + (0.35 + 0.65 * p.count / max).toFixed(2) + '"></span>' +
+      '<ul class="tmap-list">' + places.map((p, i) =>
+        '<li' + (i >= SHOW ? ' class="tmap-more" hidden' : '') + '><span class="tmap-dot" style="--heat:' + (0.35 + 0.65 * p.count / max).toFixed(2) + '"></span>' +
         '<span class="tmap-name">' + esc(p.name) + '</span>' +
         '<span class="tmap-meta">' + p.count + (p.count === 1 ? ' visit' : ' visits') +
           (p.dates[0] ? ' · ' + esc(monthYear(p.dates[0])) : '') + '</span></li>').join('') +
-      '</ul>';
+      '</ul>' +
+      (places.length > SHOW ? '<button type="button" class="tmap-toggle" aria-expanded="false">Show all ' + places.length + ' places</button>' : '');
     const canvas = container.querySelector('.tmap-canvas');
+    const toggle = container.querySelector('.tmap-toggle');
+    if (toggle) toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      container.querySelectorAll('.tmap-more').forEach(li => { li.hidden = !open; });
+      toggle.setAttribute('aria-expanded', open);
+      toggle.textContent = open ? 'Show fewer' : 'Show all ' + places.length + ' places';
+    });
+
+    // Taller map on narrow screens so it doesn't get tiny.
+    const W = 800, H = container.clientWidth < 520 ? 620 : 500;
+    canvas.style.aspectRatio = W + ' / ' + H;
 
     loadLibs().then(geo => {
       if (!container.isConnected) return;
-      const proj = d3.geoMercator().fitExtent([[16, 16], [W - 16, H - 16]], frame(places));
+      const box = frame(places);
+      const proj = d3.geoMercator().fitExtent([[16, 16], [W - 16, H - 16]], box);
+      // Smaller glow when zoomed out to the world, so spots don't smear together.
+      const lngSpan = box.coordinates[1][0] - box.coordinates[0][0];
+      const zoom = Math.min(1, Math.max(0.65, 70 / lngSpan));
       const path = d3.geoPath(proj);
       const svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
         'aria-label': 'Map of places I have traveled: ' + places.map(p => p.name + ' (' + p.count + ')').join(', ') });
@@ -103,13 +120,13 @@
 
       const heat = el('g', { class: 'tmap-heat' }, svg);
       const dots = el('g', {}, svg);
-      const base = 34;
+      const base = 34 * zoom;
       places.slice().reverse().forEach(p => {
         const [x, y] = proj([p.lng, p.lat]);
         const t = p.count / max;
         el('circle', { cx: x, cy: y, r: base * (0.75 + 0.85 * Math.sqrt(t)), fill: 'url(#tmap-heat)',
           'fill-opacity': (0.45 + 0.55 * t).toFixed(2) }, heat);
-        const d = el('circle', { class: 'tmap-pin', cx: x, cy: y, r: 4 }, dots);
+        const d = el('circle', { class: 'tmap-pin', cx: x, cy: y, r: 2.5 + 1.5 * zoom }, dots);
         el('title', {}, d).textContent = p.name + ' · ' + p.count + (p.count === 1 ? ' visit' : ' visits');
       });
       canvas.replaceChildren(svg);
