@@ -61,7 +61,23 @@ const PLACES = {
     "Gulf Shores, AL":   [30.2460, -87.7008],
     "New Orleans, LA":   [29.9511, -90.0715],
     "Oak Island, NC":    [33.9157, -78.1611],
-    "Bradenton, FL":     [27.4989, -82.5748]
+    "Bradenton, FL":     [27.4989, -82.5748],
+    "Prague, Czechia":   [50.0755, 14.4378],
+    "Budapest, Hungary": [47.4979, 19.0402],
+    "Vienna, Austria":   [48.2082, 16.3738],
+    "Amsterdam, Netherlands": [52.3676, 4.9041],
+    "Paris, France":     [48.8566, 2.3522],
+    "Lyon, France":      [45.7640, 4.8357],
+    "Nice, France":      [43.7102, 7.2620],
+    "Monaco":            [43.7384, 7.4246],
+    "Switzerland":       [46.8182, 8.2275],
+    "Cinque Terre, Italy": [44.1461, 9.6439],
+    "Barcelona, Spain":  [41.3874, 2.1686],
+    "Cologne, Germany":  [50.9375, 6.9603],
+    "Munich, Germany":   [48.1351, 11.5820],
+    "Brussels, Belgium": [50.8503, 4.3517],
+    "Bruges, Belgium":   [51.2093, 3.2247],
+    "Luxembourg":        [49.6116, 6.1319]
   };
 const HOBBIES = [
     {
@@ -116,7 +132,20 @@ const HOBBIES = [
         { date: "2022-07-01", places: ["New York, NY"] },
         { date: "2022-06-01", places: ["Machu Picchu, Peru", "Huacachina, Peru", "Lima, Peru", "Iquitos, Peru", "Cusco, Peru"] },
         { date: "2022-04-01", places: ["Gulf Shores, AL"] },
-        { date: "2022-03-01", places: ["New Orleans, LA"] }
+        { date: "2022-03-01", places: ["New Orleans, LA"] },
+        { date: "2021-08-01", places: ["Prague, Czechia"] },
+        { date: "2021-07-30", places: ["Budapest, Hungary"] },
+        { date: "2021-07-28", places: ["Vienna, Austria"] },
+        { date: "2021-07-24", places: ["Amsterdam, Netherlands"] },
+        { date: "2021-07-14", places: ["Paris, France"] },
+        { date: "2021-07-10", places: ["Switzerland"] },
+        { date: "2021-07-04", places: ["Monaco", "Nice, France"] },
+        { date: "2021-06-26", places: ["Cinque Terre, Italy"] },
+        { date: "2021-06-20", places: ["Barcelona, Spain"] },
+        { date: "2021-06-12", places: ["Cologne, Germany", "Munich, Germany"] },
+        { date: "2021-06-05", places: ["Brussels, Belgium", "Bruges, Belgium"] },
+        { date: "2021-05-30", places: ["Paris, France", "Lyon, France"] },
+        { date: "2021-05-23", places: ["Luxembourg"] }
       ],
       updates: [
         { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
