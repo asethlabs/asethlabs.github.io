@@ -50,7 +50,7 @@ const PLACES = {
     "Las Vegas, NV":     [36.1699, -115.1398],
     "Sugar Mountain, NC": [36.1293, -81.8601],
     "Birmingham, AL":    [33.5186, -86.8104],
-    "Kingston, Jamaica": [17.9714, -76.7920],
+    "Montego Bay, Jamaica": [18.4762, -77.8939],
     "San Juan, Puerto Rico": [18.4655, -66.1057]
   };
 const HOBBIES = [
@@ -96,7 +96,7 @@ const HOBBIES = [
         { date: "2024-03-01", places: ["Las Vegas, NV"] },
         { date: "2024-01-01", places: ["Sugar Mountain, NC"] },
         { date: "2023-12-01", places: ["Birmingham, AL"] },
-        { date: "2023-11-01", places: ["Kingston, Jamaica"] },
+        { date: "2023-11-01", places: ["Montego Bay, Jamaica"] },
         { date: "2023-06-01", places: ["Miami, FL"] },
         { date: "2023-04-01", places: ["San Juan, Puerto Rico"] }
       ],
