@@ -59,7 +59,8 @@ const PLACES = {
     "Huacachina, Peru":  [-14.0875, -75.7626],
     "Iquitos, Peru":     [-3.7437, -73.2516],
     "Gulf Shores, AL":   [30.2460, -87.7008],
-    "New Orleans, LA":   [29.9511, -90.0715]
+    "New Orleans, LA":   [29.9511, -90.0715],
+    "Oak Island, NC":    [33.9157, -78.1611]
   };
 const HOBBIES = [
     {
@@ -107,6 +108,7 @@ const HOBBIES = [
         { date: "2023-11-01", places: ["Montego Bay, Jamaica"] },
         { date: "2023-06-01", places: ["Miami, FL"] },
         { date: "2023-04-01", places: ["San Juan, Puerto Rico"] },
+        { date: "2023-04-01", places: ["Oak Island, NC"] },
         { date: "2022-10-01", places: ["Los Angeles, CA"] },
         { date: "2022-08-01", places: ["Miami, FL"] },
         { date: "2022-07-01", places: ["New York, NY"] },
