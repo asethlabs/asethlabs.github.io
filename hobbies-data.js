@@ -43,6 +43,13 @@ const HOBBIES = [
       about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
       now: "",
       updates: [
+        { date: "2026-03-15", title: "Chicago", text: "Went to Chicago for St. Patrick's. Saw lots of my friends from high school, college and post-grad life. Also visited Rush Med School because my friend got in and is considering going!! I also successfully thrifted for the first time in Chi.",
+          media: [
+            { src: "media/travel/chicago-bean.jpg", alt: "Crowds around the Bean in Millennium Park under a bright blue sky, with downtown towers behind it" },
+            { src: "media/travel/chicago-rush.jpg", alt: "The Rush hospital tower on a sunny day, seen from the corner of Paulina Street" },
+            { src: "media/travel/chicago-thrift-jersey.jpg", alt: "A thrifted black, white and red Chicago Bulls Nike shirt on a hanger" },
+            { src: "media/travel/chicago-skyline.jpg", alt: "View from high above downtown Chicago looking north, with the river dyed green below and Lake Michigan on the right" }
+          ] },
         { date: "2026-02-28", title: "Atlanta", text: "Went to ATL to visit family.",
           media: [
             { src: "media/travel/atlanta-cafe.jpg", alt: "A café table with a latte topped with rose petals, a berry tart, a sesame bagel with cream cheese and a slice of pistachio roll cake" }
