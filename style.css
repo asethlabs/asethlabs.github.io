@@ -3,7 +3,7 @@
     --ink: #1c1a17;
     --muted: #6b655c;
     --line: #ddd5c7;
-    --accent: #c2502b;
+    --accent: #8b1e3f;
     --card: #fbf8f2;
     --serif: "Fraunces", Georgia, serif;
     --sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -15,7 +15,7 @@
       --ink: #ece6da;
       --muted: #9a9286;
       --line: #2e2b27;
-      --accent: #e8794f;
+      --accent: #d4728a;
       --card: #1c1a17;
     }
   }
