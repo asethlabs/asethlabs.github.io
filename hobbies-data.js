@@ -83,7 +83,8 @@ const PLACES = {
     "Rome, Italy":       [41.9028, 12.4964],
     "Florence, Italy":   [43.7696, 11.2558],
     "Venice, Italy":     [45.4408, 12.3155],
-    "Pisa, Italy":       [43.7228, 10.4017]
+    "Pisa, Italy":       [43.7228, 10.4017],
+    "Hilton Head, SC":   [32.2163, -80.7526]
   };
 const HOBBIES = [
     {
@@ -146,7 +147,8 @@ const HOBBIES = [
         { date: "2021-05-30", places: ["Paris, France", "Lyon, France"] },
         { date: "2021-05-23", places: ["Luxembourg"] },
         { date: "2019-12-01", places: ["Orlando, FL"] },
-        { date: "2019-01-01", places: ["Naples, Italy", "Pompeii, Italy", "Rome, Italy", "Florence, Italy", "Venice, Italy", "Pisa, Italy"] }
+        { date: "2019-01-01", places: ["Naples, Italy", "Pompeii, Italy", "Rome, Italy", "Florence, Italy", "Venice, Italy", "Pisa, Italy"] },
+        { date: "2018-07-01", places: ["Hilton Head, SC"] }
       ],
       updates: [
         { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
