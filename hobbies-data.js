@@ -87,6 +87,7 @@ const PLACES = {
     "Hilton Head, SC":   [32.2163, -80.7526],
     "Panama City Beach, FL": [30.1766, -85.8055],
     "Montreal, Canada":  [45.5019, -73.5674],
+    "Quebec City, Canada": [46.8139, -71.2080],
     "Martha's Vineyard, MA": [41.3805, -70.6455]
   };
 const HOBBIES = [
@@ -152,7 +153,7 @@ const HOBBIES = [
         { date: "2019-12-01", places: ["Orlando, FL"] },
         { date: "2019-01-01", places: ["Naples, Italy", "Pompeii, Italy", "Rome, Italy", "Florence, Italy", "Venice, Italy", "Pisa, Italy"] },
         { date: "2018-07-01", places: ["Hilton Head, SC"] },
-        { date: "2017-07-01", places: ["Montreal, Canada", "Martha's Vineyard, MA", "Boston, MA"] },
+        { date: "2017-07-01", places: ["Montreal, Canada", "Quebec City, Canada", "Martha's Vineyard, MA", "Boston, MA"] },
         { date: "2016-07-01", places: ["Panama City Beach, FL"] },
         { date: "2016-06-01", places: ["Chicago, IL"] }
       ],
