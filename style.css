@@ -186,15 +186,64 @@
   .tmap-land { fill: var(--paper); stroke: var(--line); stroke-width: .8; stroke-linejoin: round; }
   .tmap-states { fill: none; stroke: var(--line); stroke-width: .6; stroke-dasharray: 2 2; }
   .tmap-heat { mix-blend-mode: multiply; }
-  .tmap-pin { fill: var(--accent); stroke: var(--card); stroke-width: 1.5; }
-  .tmap-legend { display: flex; align-items: center; gap: 8px; margin-top: 8px; font: 400 11.5px var(--mono); color: var(--muted); }
+  .tmap-pin { fill: var(--accent); stroke: var(--card); stroke-width: 1.5; cursor: pointer; }
+  .tmap-pin.on { stroke: var(--ink); }
+  .tmap-pin:focus-visible { outline: none; stroke: var(--ink); }
+  .tmap-canvas svg { cursor: grab; user-select: none; -webkit-user-select: none; }
+  .tmap-canvas svg.dragging { cursor: grabbing; }
+  .tmap-zoom { position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 4px; }
+  .tmap-zoom button {
+    width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--card) 92%, transparent); color: var(--ink);
+    font: 500 17px/1 var(--sans); cursor: pointer;
+  }
+  .tmap-zoom button:hover { border-color: var(--ink); }
+  .tmap-zoom button:focus-visible, .tmap-chip:focus-visible, .tmap-close:focus-visible, .tmap-post:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tmap-regions { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .tmap-chip {
+    font: 500 12.5px var(--sans); color: var(--muted); background: transparent;
+    border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer;
+  }
+  .tmap-chip:hover { color: var(--ink); border-color: var(--ink); }
+  .tmap-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .tmap-hint { margin-left: auto; }
+  .tmap-info {
+    margin-top: 12px; padding: 12px 14px; border-radius: 10px;
+    border: 1px solid var(--line); border-left: 3px solid var(--accent); background: var(--paper);
+  }
+  .tmap-info[hidden] { display: none; }
+  .tmap-info-head { display: flex; align-items: baseline; gap: 10px; }
+  .tmap-info-head b { font: 400 19px var(--serif); }
+  .tmap-info-head span { font: 400 12px var(--mono); color: var(--muted); }
+  .tmap-close {
+    margin-left: auto; width: 28px; height: 28px; border-radius: 50%; border: 0; background: none;
+    color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer;
+  }
+  .tmap-close:hover { color: var(--ink); }
+  .tmap-info ul { list-style: none; margin-top: 6px; }
+  .tmap-info li { display: flex; align-items: baseline; gap: 12px; padding: 3px 0; font-size: 14.5px; }
+  .tmap-info time { font: 400 12px var(--mono); color: var(--muted); min-width: 72px; }
+  .tmap-post {
+    padding: 0; border: 0; background: none; cursor: pointer; text-align: left;
+    font: inherit; color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px;
+  }
+  .tmap-post:hover { color: var(--accent); }
+  .updates li.flash { animation: flash 1.6s ease; }
+  @keyframes flash { 0%, 40% { background: color-mix(in srgb, var(--accent) 12%, transparent); } 100% { background: transparent; } }
+  .tmap-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin-top: 8px; font: 400 11.5px var(--mono); color: var(--muted); }
   .tmap-legend i {
     width: 90px; height: 6px; border-radius: 3px;
     background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 25%, transparent), var(--accent));
   }
   .tmap-list { list-style: none; margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 28px; }
   .tmap-list li[hidden] { display: none; }
-  .tmap-list li { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; font-size: 15px; }
+  .tmap-row {
+    display: flex; align-items: baseline; gap: 8px; width: 100%; padding: 5px 6px; margin: 0 -6px;
+    font: inherit; font-size: 15px; color: inherit; text-align: left;
+    background: none; border: 0; border-radius: 8px; cursor: pointer; box-sizing: content-box;
+  }
+  .tmap-row:hover, .tmap-row.on { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+  .tmap-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; }
   .tmap-dot {
     flex: none; width: 9px; height: 9px; border-radius: 50%; align-self: center;
     background: color-mix(in srgb, var(--accent) calc(var(--heat) * 100%), transparent);

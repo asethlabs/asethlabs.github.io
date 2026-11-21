@@ -90,7 +90,8 @@
         '<div class="updates-title">// ' + (h === ALL ? 'feed' : 'updates') + '</div>' +
         (posts.length
           ? '<ul class="updates">' + posts.map(({ u, h: src }) =>
-              '<li><div class="post-meta"><time>' + fmt(u.date) + '</time>' +
+              '<li' + (window.travelPostKey ? ' data-post="' + esc(window.travelPostKey(src, u)) + '"' : '') +
+                '><div class="post-meta"><time>' + fmt(u.date) + '</time>' +
                 (h === ALL ? '<span class="post-hobby">' + src.icon + esc(src.name) + '</span>' : '') + '</div>' +
               (u.title ? '<span class="t">' + esc(u.title) + '</span><br>' : '') +
               esc(u.text || '') + mediaHtml(u.media) + '</li>').join('') + '</ul>'
