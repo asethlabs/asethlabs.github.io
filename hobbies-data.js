@@ -15,11 +15,13 @@ const HOBBIES = [
       updates: []
     },
     {
-      id: "pilates", name: "Pilates", since: "",
+      id: "pilates", name: "Pilates", since: "since June 2026",
       icon: '<svg viewBox="0 0 48 48"><circle cx="24" cy="10" r="4"/><path d="M24 15c-6 6-12 8-18 8M24 15c6 6 12 8 18 8M24 15v13l-8 14M24 28l8 14" fill="none" stroke-width="3" stroke-linecap="round"/></svg>',
       about: "The counterbalance to lifting: control, core, and the humbling burn of a slow movement.",
       now: "",
-      updates: []
+      updates: [
+        { date: "2026-06-01", title: "Started Pilates", text: "I took my first Pilates class in June. I wanted something to balance out lifting, and it humbled me fast: slow, controlled movements are much harder than they look. I've been hooked since." }
+      ]
     },
     {
       id: "travel", name: "Travel", since: "",
