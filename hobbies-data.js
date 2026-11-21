@@ -5,6 +5,16 @@
      - now:     optional, what you're currently working on
      - updates: newest first; add entries like
          { date: "2026-11-21", title: "New PR", text: "Hit a 185 lb deadlift." }
+     - media:   optional photos/videos on an update. Put files in
+                media/<hobby>/ and list them in order:
+         { date: "2026-02-15", title: "Napa", text: "...",
+           media: [
+             { src: "media/travel/napa-vineyard.jpg", alt: "Rows of vines in Napa" },
+             { src: "media/travel/waymo.mp4", caption: "First Waymo ride" }
+           ] }
+       Photos: .jpg/.png/.webp, Videos: .mp4/.webm/.mov.
+       alt and caption are optional; poster sets a video's cover image.
+     The "All" tab is built automatically from every hobby's updates.
      ============================================================ */
 const HOBBIES = [
     {
