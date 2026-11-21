@@ -40,7 +40,18 @@ const PLACES = {
     "Amritsar, India":   [31.6340, 74.8723],
     "Rishikesh, India":  [30.0869, 78.2676],
     "Uttar Pradesh, India":   [26.85, 80.95],
-    "Madhya Pradesh, India":  [23.5, 78.0]
+    "Madhya Pradesh, India":  [23.5, 78.0],
+    "Banff, Canada":     [51.1784, -115.5708],
+    "Osaka, Japan":      [34.6937, 135.5023],
+    "Kyoto, Japan":      [35.0116, 135.7681],
+    "Hiroshima, Japan":  [34.3853, 132.4553],
+    "Tokyo, Japan":      [35.6762, 139.6503],
+    "Mount Fuji, Japan": [35.3606, 138.7274],
+    "Las Vegas, NV":     [36.1699, -115.1398],
+    "Sugar Mountain, NC": [36.1293, -81.8601],
+    "Birmingham, AL":    [33.5186, -86.8104],
+    "Jamaica":           [18.1096, -77.2975],
+    "Puerto Rico":       [18.2208, -66.5901]
   };
 const HOBBIES = [
     {
@@ -78,7 +89,16 @@ const HOBBIES = [
         { date: "2025-04-01", places: ["San Diego, CA"] },
         { date: "2025-01-01", places: ["Boston, MA"] },
         { date: "2024-12-01", places: ["Nashville, TN"] },
-        { date: "2024-10-01", places: ["New York, NY"] }
+        { date: "2024-10-01", places: ["New York, NY"] },
+        { date: "2024-09-01", places: ["Miami, FL"] },
+        { date: "2024-07-01", places: ["Banff, Canada"] },
+        { date: "2024-06-01", places: ["Osaka, Japan", "Kyoto, Japan", "Hiroshima, Japan", "Tokyo, Japan", "Mount Fuji, Japan"] },
+        { date: "2024-03-01", places: ["Las Vegas, NV"] },
+        { date: "2024-01-01", places: ["Sugar Mountain, NC"] },
+        { date: "2023-12-01", places: ["Birmingham, AL"] },
+        { date: "2023-11-01", places: ["Jamaica"] },
+        { date: "2023-06-01", places: ["Miami, FL"] },
+        { date: "2023-04-01", places: ["Puerto Rico"] }
       ],
       updates: [
         { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
