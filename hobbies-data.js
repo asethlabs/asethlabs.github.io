@@ -189,7 +189,13 @@ const HOBBIES = [
       icon: '<svg viewBox="0 0 48 48"><path d="M18 34V10l22-5v24" fill="none" stroke-width="3" stroke-linejoin="round"/><ellipse cx="13" cy="34" rx="6" ry="5"/><ellipse cx="35" cy="29" rx="6" ry="5"/></svg>',
       about: "I'm from Atlanna so all roads lead back to rap... unless they don't.",
       now: "",
-      updates: []
+      // A post can carry a song: { spotify: "<track id>", title, artist }
+      // (from a Spotify share link: open.spotify.com/track/<track id>), or
+      // { youtube: "<video id>", start: 60, end: 90, title, artist } for a clip.
+      updates: [
+        { date: "2025-11-24", text: "I have been on such a rock kick, specifically Linkin Park.",
+          song: { spotify: "2nLtzopw4rPReszdYBJU6h", title: "Numb", artist: "Linkin Park" } }
+      ]
     },
     {
       id: "reading", name: "Reading", since: "",

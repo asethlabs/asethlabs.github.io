@@ -39,6 +39,24 @@
         : '<p class="empty">No books yet. Check back soon.</p>');
     }
 
+    // A song on a post: Spotify's official player (30-second preview, or the
+    // full song for listeners logged into Spotify), or a YouTube clip from a start time.
+    function songHtml(song) {
+      if (!song) return '';
+      const label = esc([song.title, song.artist].filter(Boolean).join(' by ') || 'Song');
+      const id = String(song.spotify || song.youtube || '').replace(/[^A-Za-z0-9_-]/g, '');
+      if (!id) return '';
+      const src = song.spotify
+        ? 'https://open.spotify.com/embed/track/' + id + '?utm_source=generator'
+        : 'https://www.youtube-nocookie.com/embed/' + id + '?start=' + (parseInt(song.start, 10) || 0) +
+          (song.end ? '&end=' + (parseInt(song.end, 10) || 0) : '');
+      const link = song.spotify ? 'https://open.spotify.com/track/' + id : 'https://www.youtube.com/watch?v=' + id;
+      return '<div class="song' + (song.spotify ? '' : ' video') + '">' +
+        '<iframe src="' + src + '" title="' + label + '" loading="lazy" ' +
+          'allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>' +
+        '<a class="song-link" href="' + link + '" target="_blank" rel="noopener">♪ ' + label + ' ↗</a></div>';
+    }
+
     function mediaHtml(list) {
       const items = (list || []).map(m => typeof m === 'string' ? { src: m } : m).filter(m => m && m.src);
       if (!items.length) return '';
@@ -94,7 +112,7 @@
                 '><div class="post-meta"><time>' + fmt(u.date) + '</time>' +
                 (h === ALL ? '<span class="post-hobby">' + src.icon + esc(src.name) + '</span>' : '') + '</div>' +
               (u.title ? '<span class="t">' + esc(u.title) + '</span><br>' : '') +
-              esc(u.text || '') + mediaHtml(u.media) + '</li>').join('') + '</ul>'
+              esc(u.text || '') + songHtml(u.song) + mediaHtml(u.media) + '</li>').join('') + '</ul>'
           : '<p class="empty">No updates yet. Check back soon.</p>'));
       if (hasMap(h)) window.renderTravelMap(panel.querySelector('.tmap'), h, typeof PLACES !== 'undefined' ? PLACES : {});
       panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = '';
