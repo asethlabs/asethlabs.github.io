@@ -187,7 +187,7 @@ const HOBBIES = [
     {
       id: "cooking", name: "Cooking", since: "",
       icon: '<svg viewBox="0 0 48 48"><path d="M6 22h36v4c0 9-7 16-16 16h-4C13 42 6 35 6 26z"/><rect x="2" y="20" width="44" height="4" rx="2"/><path d="M17 14c0-3 3-3 3-6M24 14c0-3 3-3 3-6M31 14c0-3 3-3 3-6" fill="none" stroke-width="2.5" stroke-linecap="round"/></svg>',
-      about: "Experimenting in the kitchen. Half recipe, half intuition, usually worth it.",
+      about: "Experimenting in the kitchen. Half recipe, half intuition, usually worth it. Always with a focus on protein, fiber, and micronutrients.",
       now: "",
       updates: []
     }
