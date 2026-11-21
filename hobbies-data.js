@@ -150,7 +150,8 @@ const HOBBIES = [
         { date: "2019-12-01", places: ["Orlando, FL"] },
         { date: "2019-01-01", places: ["Naples, Italy", "Pompeii, Italy", "Rome, Italy", "Florence, Italy", "Venice, Italy", "Pisa, Italy"] },
         { date: "2018-07-01", places: ["Hilton Head, SC"] },
-        { date: "2016-07-01", places: ["Panama City Beach, FL"] }
+        { date: "2016-07-01", places: ["Panama City Beach, FL"] },
+        { date: "2016-06-01", places: ["Chicago, IL"] }
       ],
       updates: [
         { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
