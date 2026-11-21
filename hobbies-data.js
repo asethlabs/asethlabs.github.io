@@ -96,7 +96,7 @@ const HOBBIES = [
     {
       id: "travel", name: "Travel", since: "",
       icon: '<svg viewBox="0 0 48 48"><path d="M44 8 L4 22 L18 27 L22 42 L29 31 L38 36 Z"/></svg>',
-      about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
+      about: "The culture. The food. The people. The architecture. The history. Here for all of it. All my trips are planned out for the next year, maybe we can plan something for the year after?",
       now: "",
       visits: [
         { date: "2025-12-01", places: ["Atlanta, GA", "New York, NY"] },
