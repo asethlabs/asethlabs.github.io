@@ -32,7 +32,7 @@ const PLACES = {
     "Nashville, TN":     [36.1627, -86.7816],
     "Miami, FL":         [25.7617, -80.1918],
     "Orlando, FL":       [28.5384, -81.3789],
-    "Arizona":           [34.2, -111.7],
+    "Chandler, AZ":      [33.3062, -111.8413],
     "San Diego, CA":     [32.7157, -117.1611],
     "Olympic National Park, WA": [47.8021, -123.6044],
     "Iceland":           [64.1466, -21.9426],
@@ -50,8 +50,8 @@ const PLACES = {
     "Las Vegas, NV":     [36.1699, -115.1398],
     "Sugar Mountain, NC": [36.1293, -81.8601],
     "Birmingham, AL":    [33.5186, -86.8104],
-    "Jamaica":           [18.1096, -77.2975],
-    "Puerto Rico":       [18.2208, -66.5901]
+    "Kingston, Jamaica": [17.9714, -76.7920],
+    "San Juan, Puerto Rico": [18.4655, -66.1057]
   };
 const HOBBIES = [
     {
@@ -85,7 +85,7 @@ const HOBBIES = [
         { date: "2025-09-01", places: ["Iceland"] },
         { date: "2025-08-01", places: ["Miami, FL"] },
         { date: "2025-07-01", places: ["Olympic National Park, WA"] },
-        { date: "2025-05-01", places: ["Arizona", "Atlanta, GA", "Orlando, FL"] },
+        { date: "2025-05-01", places: ["Chandler, AZ", "Atlanta, GA", "Orlando, FL"] },
         { date: "2025-04-01", places: ["San Diego, CA"] },
         { date: "2025-01-01", places: ["Boston, MA"] },
         { date: "2024-12-01", places: ["Nashville, TN"] },
@@ -96,9 +96,9 @@ const HOBBIES = [
         { date: "2024-03-01", places: ["Las Vegas, NV"] },
         { date: "2024-01-01", places: ["Sugar Mountain, NC"] },
         { date: "2023-12-01", places: ["Birmingham, AL"] },
-        { date: "2023-11-01", places: ["Jamaica"] },
+        { date: "2023-11-01", places: ["Kingston, Jamaica"] },
         { date: "2023-06-01", places: ["Miami, FL"] },
-        { date: "2023-04-01", places: ["Puerto Rico"] }
+        { date: "2023-04-01", places: ["San Juan, Puerto Rico"] }
       ],
       updates: [
         { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
