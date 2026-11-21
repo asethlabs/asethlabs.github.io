@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hobbies · Annie Seth</title>
+<meta name="description" content="Annie Seth — software engineer building knowledge systems for AI agents. Seattle, WA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="index.html">annie<span>.</span></a>
+    <ul>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="discoveries.html">Discoveries</a></li>
+      <li><a href="hobbies.html" aria-current="page">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">// off the clock</p>
+      <h1>Hobbies</h1>
+      <p class="lede">When I'm not thinking about ontologies, you'll probably find me doing one of these. Pick one to see how it's going.</p>
+    </header>
+    <section>
+      <div class="sec-head">
+        <p class="sec-label"><b>03</b> / log</p>
+        <div>
+          
+          
+          <div class="tabs" role="tablist" aria-label="Hobbies" id="hobby-tabs"></div>
+          <div class="panel" role="tabpanel" id="hobby-panel" aria-live="polite"></div>
+        
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Annie Seth</span>
+    <span>Built in Seattle.</span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="hobbies-data.js"></script>
+<script src="hobbies.js"></script>
+</body>
+</html>

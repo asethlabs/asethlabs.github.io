@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discoveries · Annie Seth</title>
+<meta name="description" content="Annie Seth — software engineer building knowledge systems for AI agents. Seattle, WA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="index.html">annie<span>.</span></a>
+    <ul>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="discoveries.html" aria-current="page">Discoveries</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">// field notes</p>
+      <h1>Discoveries</h1>
+      <p class="lede">Things I've learned building knowledge systems for AI agents, each with the one-line takeaway.</p>
+    </header>
+    <section>
+      <div class="sec-head">
+        <p class="sec-label"><b>//</b> log</p>
+        <div>
+
+          <div class="role">
+            <div class="role-top">
+              <h3>Not every source should count the same</h3>
+              <span class="when">Microsoft · Brain</span>
+            </div>
+            <p class="disc-body">When an agent pulls knowledge from many places, the places disagree. What worked for us was a clear order of trust: code and docs are the source of truth, and chats and emails act as updates on top of them.</p>
+            <p class="takeaway"><b>takeaway</b>Rank your sources before you merge them.</p>
+            <div class="tags"><span class="tag">knowledge</span><span class="tag">ontology</span></div>
+          </div>
+
+          <div class="role">
+            <div class="role-top">
+              <h3>Facts need a record of where they came from</h3>
+              <span class="when">Microsoft · Brain</span>
+            </div>
+            <p class="disc-body">Building Brain's attestation layer showed me that storing a fact isn't enough. To trust it, an agent needs to know where the fact came from, when it last changed, and whether it still holds.</p>
+            <p class="takeaway"><b>takeaway</b>An agent is only as trustworthy as its provenance.</p>
+            <div class="tags"><span class="tag">trust</span><span class="tag">agents</span></div>
+          </div>
+
+          <div class="role">
+            <div class="role-top">
+              <h3>Shared knowledge beat more agents</h3>
+              <span class="when">Microsoft · Brain</span>
+            </div>
+            <p class="disc-body">Our first platform was a multi-agent system. Replacing it with one ontology-based knowledge layer that every agent reads from cut end-to-end response latency by <span class="stat">33%</span>.</p>
+            <p class="takeaway"><b>takeaway</b>Give agents better ground to stand on before adding more agents.</p>
+            <div class="tags"><span class="tag">architecture</span><span class="tag">latency</span></div>
+          </div>
+
+          <div class="role">
+            <div class="role-top">
+              <h3>One model's answer isn't the final answer</h3>
+              <span class="when">AT&amp;T · Contract review</span>
+            </div>
+            <p class="disc-body">On a GenAI contract-review tool for legal, we compared outputs across several models and reconciled them before choosing the answer users saw. Post-processing mattered as much as prompting.</p>
+            <p class="takeaway"><b>takeaway</b>Treat model output as a draft to check, not a result to ship.</p>
+            <div class="tags"><span class="tag">LLMs</span><span class="tag">evals</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Annie Seth</span>
+    <span>Built in Seattle.</span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work · Annie Seth</title>
+<meta name="description" content="Annie Seth — software engineer building knowledge systems for AI agents. Seattle, WA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="index.html">annie<span>.</span></a>
+    <ul>
+      <li><a href="work.html" aria-current="page">Work</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="discoveries.html">Discoveries</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">// experience</p>
+      <h1>Where I've worked</h1>
+      <p class="lede">Building AI systems in production, from GenAI document review to knowledge platforms for agents.</p>
+    </header>
+    <section>
+      <div class="sec-head">
+        <p class="sec-label"><b>01</b> / roles</p>
+        <div>
+          
+
+          <div class="role">
+            <div class="role-top">
+              <h3>Software Engineer <span class="org">· Microsoft</span></h3>
+              <span class="when">Feb 2025 — now</span>
+            </div>
+            <ul>
+              <li>Founding engineer on two 0→1 platforms: an early multi-agent system, then <strong>Brain</strong>, the ontology-based knowledge platform that replaced it — cutting end-to-end response latency by <span class="stat">33%</span>.</li>
+              <li>Built Brain's feedback (self-improvement) loop and its <strong>attestation layer</strong>, which tracks the validity of knowledge gathered from code, docs, and team conversations.</li>
+              <li>Own platform integrations — onboarded <span class="stat">15+</span> partner teams across the incident lifecycle (detection, triage, impact, diagnosis) and extended Brain to teams beyond my org.</li>
+              <li>Drive knowledge-surfacing use cases with partners: scoping new entities, building LLM-as-a-judge evals, and writing contributor docs.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-top">
+              <h3>Software Engineer <span class="org">· AT&amp;T, Chief Data Office</span></h3>
+              <span class="when">2023 — 2025</span>
+            </div>
+            <ul>
+              <li>Built a GenAI contract-review platform that pre-populated answers for the legal team, replacing manual reads of 100+ page client contracts.</li>
+              <li>Tuned LLM parameters, post-processed and stored responses, and reconciled outputs across models to choose the final answer shown to users.</li>
+            </ul>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Annie Seth</span>
+    <span>Built in Seattle.</span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

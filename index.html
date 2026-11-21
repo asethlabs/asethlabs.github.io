@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annie Seth</title>
+<meta name="description" content="Annie Seth — software engineer building knowledge systems for AI agents. Seattle, WA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="index.html" aria-current="page">annie<span>.</span></a>
+    <ul>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="discoveries.html">Discoveries</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+    <header class="hero">
+      <p class="eyebrow">// software engineer · seattle, wa</p>
+      <h1>Hi, I'm Annie.<br>I build the <em>knowledge</em> that AI agents reason on.</h1>
+      <p class="lede">I'm a software engineer at <strong>Microsoft</strong>, working on Brain — a shared knowledge platform that grounds AI agents in a structured ontology. I care about making agents trustworthy: knowing what's true, where it came from, and when it changed.</p>
+      <div class="cta">
+        <a class="btn primary" href="work.html">See my work</a>
+        <a class="btn" href="contact.html">Get in touch</a>
+      </div>
+    </header>
+    <section>
+      <div class="sec-head">
+        <p class="sec-label"><b>//</b> about me</p>
+        <div>
+          <h2>A bit more about me</h2>
+          <p>I like the unglamorous middle of AI systems: the data an agent stands on. At work that means modeling entities, resolving conflicting sources (code and docs win; chats and emails update), and building the loops that let a system notice when it's wrong.</p>
+          <p>Outside of work I tinker on my own assistant and dig into research on retrieval and knowledge — the problems I think will matter most as agents take on more real work.</p>
+          <div class="role" style="margin-top:28px;">
+            <div class="edu">
+              <h3>Georgia Institute of Technology</h3>
+              <span class="when">B.S. &amp; M.S., Computer Science</span>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="sec-head">
+        <p class="sec-label"><b>//</b> explore</p>
+        <div>
+          <h2>Have a look around</h2>
+          <div class="explore">
+            <a href="work.html"><b>Work</b><span>Microsoft, AT&amp;T, and what I've shipped.</span></a>
+            <a href="projects.html"><b>Projects</b><span>JARVIS and my research portfolio.</span></a>
+            <a href="hobbies.html"><b>Hobbies</b><span>Lifting, Pilates, travel, and more.</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Annie Seth</span>
+    <span>Built in Seattle.</span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
