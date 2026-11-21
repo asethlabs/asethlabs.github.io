@@ -51,7 +51,15 @@ const PLACES = {
     "Sugar Mountain, NC": [36.1293, -81.8601],
     "Birmingham, AL":    [33.5186, -86.8104],
     "Montego Bay, Jamaica": [18.4762, -77.8939],
-    "San Juan, Puerto Rico": [18.4655, -66.1057]
+    "San Juan, Puerto Rico": [18.4655, -66.1057],
+    "Los Angeles, CA":   [34.0522, -118.2437],
+    "Lima, Peru":        [-12.0464, -77.0428],
+    "Cusco, Peru":       [-13.5319, -71.9675],
+    "Machu Picchu, Peru": [-13.1631, -72.5450],
+    "Huacachina, Peru":  [-14.0875, -75.7626],
+    "Iquitos, Peru":     [-3.7437, -73.2516],
+    "Gulf Shores, AL":   [30.2460, -87.7008],
+    "New Orleans, LA":   [29.9511, -90.0715]
   };
 const HOBBIES = [
     {
@@ -98,7 +106,13 @@ const HOBBIES = [
         { date: "2023-12-01", places: ["Birmingham, AL"] },
         { date: "2023-11-01", places: ["Montego Bay, Jamaica"] },
         { date: "2023-06-01", places: ["Miami, FL"] },
-        { date: "2023-04-01", places: ["San Juan, Puerto Rico"] }
+        { date: "2023-04-01", places: ["San Juan, Puerto Rico"] },
+        { date: "2022-10-01", places: ["Los Angeles, CA"] },
+        { date: "2022-08-01", places: ["Miami, FL"] },
+        { date: "2022-07-01", places: ["New York, NY"] },
+        { date: "2022-06-01", places: ["Machu Picchu, Peru", "Huacachina, Peru", "Lima, Peru", "Iquitos, Peru", "Cusco, Peru"] },
+        { date: "2022-04-01", places: ["Gulf Shores, AL"] },
+        { date: "2022-03-01", places: ["New Orleans, LA"] }
       ],
       updates: [
         { date: "2026-04-15", title: "New York City", places: ["New York, NY"], text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
