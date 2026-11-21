@@ -187,7 +187,7 @@ const HOBBIES = [
     {
       id: "music", name: "Music", since: "",
       icon: '<svg viewBox="0 0 48 48"><path d="M18 34V10l22-5v24" fill="none" stroke-width="3" stroke-linejoin="round"/><ellipse cx="13" cy="34" rx="6" ry="5"/><ellipse cx="35" cy="29" rx="6" ry="5"/></svg>',
-      about: "The soundtrack to every workout, every walk, and every long debugging session.",
+      about: "I'm from Atlanta so all roads lead back to rap... unless they don't.",
       now: "",
       updates: []
     },
