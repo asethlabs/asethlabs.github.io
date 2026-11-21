@@ -18,3 +18,4 @@ A static site (plain HTML, CSS and JS, no build step) hosted on GitHub Pages fro
 - Annie works at Microsoft. Don't add internal project details, metrics or names she hasn't already approved for the site. Ask if unsure.
 - Before editing, pull the latest `main` so changes made from another session aren't overwritten.
 - Check that pages still work at phone width (around 375px).
+- After changing `style.css` or any `.js`/data file, bump the `?v=` version on its `<link>`/`<script>` tags in every HTML file (e.g. `?v=20261121a` → `?v=20261122a`), so browsers don't mix a cached old file with the new page.
