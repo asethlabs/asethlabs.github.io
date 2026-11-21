@@ -60,7 +60,8 @@ const PLACES = {
     "Iquitos, Peru":     [-3.7437, -73.2516],
     "Gulf Shores, AL":   [30.2460, -87.7008],
     "New Orleans, LA":   [29.9511, -90.0715],
-    "Oak Island, NC":    [33.9157, -78.1611]
+    "Oak Island, NC":    [33.9157, -78.1611],
+    "Bradenton, FL":     [27.4989, -82.5748]
   };
 const HOBBIES = [
     {
@@ -102,6 +103,7 @@ const HOBBIES = [
         { date: "2024-09-01", places: ["Miami, FL"] },
         { date: "2024-07-01", places: ["Banff, Canada"] },
         { date: "2024-06-01", places: ["Osaka, Japan", "Kyoto, Japan", "Hiroshima, Japan", "Tokyo, Japan", "Mount Fuji, Japan"] },
+        { date: "2024-04-01", places: ["Bradenton, FL"] },
         { date: "2024-03-01", places: ["Las Vegas, NV"] },
         { date: "2024-01-01", places: ["Sugar Mountain, NC"] },
         { date: "2023-12-01", places: ["Birmingham, AL"] },
