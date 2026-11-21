@@ -43,6 +43,11 @@ const HOBBIES = [
       about: "New cities, new food, and getting a little lost on purpose. Always planning the next trip.",
       now: "",
       updates: [
+        { date: "2026-04-15", title: "New York City", text: "In NYC for my birthday!! Got to spend it at a big dinner with people from different eras of my life. Feeling so blessed to have a life full of such wonderful people. Some of them also made me this fantastic coconut cake. Isn't it beautiful?",
+          media: [
+            { src: "media/travel/nyc-birthday-dinner.jpg", alt: "Birthday dinner at an Italian restaurant: a plate of tiramisu and pastries with a big sparkler, held up with a huge smile" },
+            { src: "media/travel/nyc-coconut-cake.jpg", alt: "A homemade coconut cake with white frosting, shredded coconut, blueberries and gold candles" }
+          ] },
         { date: "2026-03-15", title: "Chicago", text: "Went to Chicago for St. Patrick's. Saw lots of my friends from high school, college and post-grad life. Also visited Rush Med School because my friend got in and is considering going!! I also successfully thrifted for the first time in Chi.",
           media: [
             { src: "media/travel/chicago-bean.jpg", alt: "Crowds around the Bean in Millennium Park under a bright blue sky, with downtown towers behind it" },
