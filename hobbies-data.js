@@ -175,7 +175,7 @@ const HOBBIES = [
     {
       id: "reading", name: "Reading", since: "",
       icon: '<svg viewBox="0 0 48 48"><path d="M24 12C18 8 10 8 4 10v28c6-2 14-2 20 2 6-4 14-4 20-2V10c-6-2-14-2-20 2z"/></svg>',
-      about: "Always have a book going. A mix of fiction and whatever nonfiction rabbit hole I'm in.",
+      about: "Always have a book going, and it's always nonfiction. I've tried fiction, but some part of my brain keeps asking what I'm supposed to be learning.",
       now: "",
       // Reading is a shelf, not a feed: books show A to Z by title.
       // status: "reading" (in progress) or "finished"; review is optional.
