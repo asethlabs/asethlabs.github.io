@@ -30,12 +30,18 @@
     <header class="page-head">
       <p class="eyebrow">// field notes</p>
       <h1>Discoveries</h1>
-      <p class="lede">Things I've learned building knowledge systems for AI agents, each with the one-line takeaway.</p>
+      <p class="lede">Things I've learned building knowledge systems for AI agents, plus the articles and videos worth your time, each with the one-line takeaway.</p>
     </header>
     <section>
       <div class="sec-head">
         <p class="sec-label"><b>//</b> log</p>
         <div>
+          <div class="tabs" role="tablist" aria-label="Discoveries" id="disc-tabs">
+            <button class="tab" type="button" role="tab" id="tab-notes" data-panel="panel-notes" aria-controls="panel-notes" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z" fill="none" stroke-width="2" stroke-linejoin="round"/></svg><span>My notes</span></button>
+            <button class="tab" type="button" role="tab" id="tab-reviews" data-panel="panel-reviews" aria-controls="panel-reviews" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z" fill="none" stroke-width="2" stroke-linejoin="round"/></svg><span>Worth your time</span></button>
+          </div>
+
+          <div id="panel-notes" role="tabpanel" aria-labelledby="tab-notes">
 
           <div class="role">
             <div class="role-top">
@@ -77,6 +83,14 @@
             <div class="tags"><span class="tag">LLMs</span><span class="tag">evals</span></div>
           </div>
 
+          </div>
+
+          <div id="panel-reviews" role="tabpanel" aria-labelledby="tab-reviews" hidden>
+            <p class="review-intro">Articles and videos about AI, agents and knowledge systems that I think are worth your time, with my take on each.</p>
+            <div class="review-filter" id="review-filter" role="group" aria-label="Filter by type"></div>
+            <div id="review-list"></div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -91,5 +105,7 @@
 </footer>
 
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="reviews-data.js"></script>
+<script src="discoveries.js"></script>
 </body>
 </html>

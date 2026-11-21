@@ -200,12 +200,12 @@
   .tmap-zoom button:hover { border-color: var(--ink); }
   .tmap-zoom button:focus-visible, .tmap-chip:focus-visible, .tmap-close:focus-visible, .tmap-post:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .tmap-regions { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
-  .tmap-chip {
+  .tmap-chip, .filter-chip {
     font: 500 12.5px var(--sans); color: var(--muted); background: transparent;
     border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer;
   }
-  .tmap-chip:hover { color: var(--ink); border-color: var(--ink); }
-  .tmap-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .tmap-chip:hover, .filter-chip:hover { color: var(--ink); border-color: var(--ink); }
+  .tmap-chip[aria-pressed="true"], .filter-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
   .tmap-hint { margin-left: auto; }
   .tmap-info {
     margin-top: 12px; padding: 12px 14px; border-radius: 10px;
@@ -334,6 +334,23 @@
   .takeaway { margin-top: 12px; font: italic 400 18px/1.4 var(--serif); }
   .takeaway b { font: 400 12px var(--mono); font-style: normal; color: var(--accent); letter-spacing: .03em; margin-right: 10px; }
   .role .tags { margin-top: 12px; padding-top: 0; }
+
+  /* discoveries: worth your time */
+  #disc-tabs { margin-top: 0; margin-bottom: 6px; }
+  .review-intro { color: var(--muted); font-size: 15.5px; margin-top: 18px; }
+  .review-filter { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+  .review-filter[hidden] { display: none; }
+  #review-list { margin-top: 10px; }
+  #review-list .role:first-child, #panel-notes .role:first-child { padding-top: 18px; }
+  .filter-chip span { opacity: .65; margin-left: 2px; }
+  .filter-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .review h3 a { text-decoration: none; }
+  .review h3 a:hover { text-decoration: underline; }
+  .review-kind { display: inline-flex; align-items: center; gap: 5px; }
+  .review-kind svg { width: 13px; height: 13px; fill: currentColor; stroke: currentColor; flex: none; }
+  .review-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+  .review-foot .tags { margin-top: 0; }
+  .review-open { font: 400 13px var(--mono); color: var(--accent); white-space: nowrap; }
   @media (max-width: 480px) {
     .wrap { padding: 0 18px; }
     nav ul { gap: 11px; font-size: 12.5px; }
