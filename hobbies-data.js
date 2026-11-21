@@ -81,13 +81,6 @@ const PLACES = {
   };
 const HOBBIES = [
     {
-      id: "lifting", name: "Lifting", since: "",
-      icon: '<svg viewBox="0 0 48 48"><rect x="4" y="18" width="6" height="12" rx="1.5"/><rect x="38" y="18" width="6" height="12" rx="1.5"/><rect x="10" y="14" width="5" height="20" rx="1.5"/><rect x="33" y="14" width="5" height="20" rx="1.5"/><rect x="15" y="22.5" width="18" height="3" rx="1.5"/></svg>',
-      about: "Strength training is my reset button. Progress you can measure, one plate at a time.",
-      now: "",
-      updates: []
-    },
-    {
       id: "pilates", name: "Pilates", since: "since June 2026",
       icon: '<svg viewBox="0 0 48 48"><circle cx="24" cy="10" r="4"/><path d="M24 15c-6 6-12 8-18 8M24 15c6 6 12 8 18 8M24 15v13l-8 14M24 28l8 14" fill="none" stroke-width="3" stroke-linecap="round"/></svg>',
       about: "The counterbalance to lifting: control, core, and the humbling burn of a slow movement.",
