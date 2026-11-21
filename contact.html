@@ -39,9 +39,9 @@
           
           
           <ul class="contact-list">
-            <li><span class="k">email</span><a href="mailto:you@example.com">you@example.com</a></li>
-            <li><span class="k">linkedin</span><a href="https://www.linkedin.com/in/your-handle">linkedin.com/in/your-handle</a></li>
-            <li><span class="k">github</span><a href="https://github.com/your-handle">github.com/your-handle</a></li>
+            <li><span class="k">email</span><a class="js-email" data-user="asethlabs" data-domain="gmail.com" href="#">asethlabs [at] gmail [dot] com</a></li>
+            <li><span class="k">linkedin</span><a href="https://www.linkedin.com/in/annie-seth" target="_blank" rel="noopener">linkedin.com/in/annie-seth</a></li>
+            <li><span class="k">github</span><a href="https://github.com/asethlabs" target="_blank" rel="noopener">github.com/asethlabs</a></li>
             <li><span class="k">location</span><span>Seattle, WA</span></li>
           </ul>
         
@@ -59,5 +59,11 @@
 </footer>
 
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+  document.querySelectorAll('.js-email').forEach(function (a) {
+    var addr = a.dataset.user + '@' + a.dataset.domain;
+    a.href = 'mailto:' + addr; a.textContent = addr;
+  });
+</script>
 </body>
 </html>
