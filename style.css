@@ -158,6 +158,21 @@
   }
   .post-hobby svg { width: 12px; height: 12px; fill: currentColor; stroke: currentColor; }
 
+  /* hobbies: reading shelf */
+  .books { list-style: none; }
+  .books li { padding: 14px 0; border-bottom: 1px dashed var(--line); }
+  .books li:last-child { border-bottom: 0; }
+  .book-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .book-title { font: 400 21px/1.25 var(--serif); }
+  .book-author { color: var(--muted); font-size: 14.5px; margin-top: 2px; }
+  .book-status {
+    flex: none; font: 400 11.5px var(--mono); color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px;
+  }
+  .book-status.reading { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .book-review { margin-top: 8px; }
+  .book-review.empty { color: var(--muted); font-size: 15px; font-style: italic; }
+
   /* hobbies: travel map */
   .tmap-stats { font-size: 15px; color: var(--muted); margin-bottom: 10px; }
   .tmap-stats b { color: var(--ink); font-weight: 600; }

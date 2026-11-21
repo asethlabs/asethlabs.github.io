@@ -22,6 +22,23 @@
     const hasMap = h => h !== ALL && typeof window.renderTravelMap === 'function' &&
       (h.updates || []).concat(h.visits || []).some(u => u.places || u.place);
 
+    // Reading shows a shelf of books, A to Z by title, instead of a dated feed.
+    const sortTitle = t => String(t || '').replace(/^(the|a|an)\s+/i, '').toLowerCase();
+    function booksHtml(books) {
+      const list = books.slice().sort((a, b) => sortTitle(a.title).localeCompare(sortTitle(b.title)));
+      return '<div class="updates-title">// books</div>' + (list.length
+        ? '<ul class="books">' + list.map(b => {
+            const reading = b.status === 'reading';
+            return '<li><div class="book-head"><span class="book-title">' + esc(b.title) + '</span>' +
+              '<span class="book-status' + (reading ? ' reading' : '') + '">' + (reading ? 'In progress' : 'Finished') + '</span></div>' +
+              (b.author ? '<div class="book-author">' + esc(b.author) + '</div>' : '') +
+              (b.review ? '<p class="book-review">' + esc(b.review) + '</p>'
+                : '<p class="book-review empty">' + (reading ? 'Review once I finish.' : 'No review yet.') + '</p>') +
+              '</li>';
+          }).join('') + '</ul>'
+        : '<p class="empty">No books yet. Check back soon.</p>');
+    }
+
     function mediaHtml(list) {
       const items = (list || []).map(m => typeof m === 'string' ? { src: m } : m).filter(m => m && m.src);
       if (!items.length) return '';
@@ -69,6 +86,7 @@
         '<p class="about">' + esc(h.about) + '</p>' +
         (h.now ? '<div class="now"><b>CURRENTLY</b>' + esc(h.now) + '</div>' : '') +
         (hasMap(h) ? '<div class="updates-title">// where I\'ve been</div><div class="tmap"></div>' : '') +
+        (h.books ? booksHtml(h.books) :
         '<div class="updates-title">// ' + (h === ALL ? 'feed' : 'updates') + '</div>' +
         (posts.length
           ? '<ul class="updates">' + posts.map(({ u, h: src }) =>
@@ -76,7 +94,7 @@
                 (h === ALL ? '<span class="post-hobby">' + src.icon + esc(src.name) + '</span>' : '') + '</div>' +
               (u.title ? '<span class="t">' + esc(u.title) + '</span><br>' : '') +
               esc(u.text || '') + mediaHtml(u.media) + '</li>').join('') + '</ul>'
-          : '<p class="empty">No updates yet. Check back soon.</p>');
+          : '<p class="empty">No updates yet. Check back soon.</p>'));
       if (hasMap(h)) window.renderTravelMap(panel.querySelector('.tmap'), h, typeof PLACES !== 'undefined' ? PLACES : {});
       panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = '';
       if (user) { try { localStorage.setItem('hobby-tab', h.id); } catch (e) {} }
