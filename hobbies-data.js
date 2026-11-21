@@ -20,7 +20,11 @@ const HOBBIES = [
       about: "The counterbalance to lifting: control, core, and the humbling burn of a slow movement.",
       now: "",
       updates: [
-        { date: "2026-06-01", title: "Started Pilates", text: "I took my first Pilates class in June. I wanted something to balance out lifting, and it humbled me fast: slow, controlled movements are much harder than they look. I've been hooked since." }
+        { date: "2026-11-21", text: "I almost didn't finish my classes for the month before coming home for Thanksgiving. Let's just say there were 3 days this month that I went to Pilates twice a day. I am NOT wasting a class. But I have been noticing my shoulders looking and feeling a bit stronger. Motivated to get another DEXA soon to see my progress" },
+        { date: "2026-10-01", text: "I bought the 12 class pack and am traveling quite a bit for the next few months, so I've been going to Pilates everyday. Honestly, I kinda like the boot camp like structure. But I have not been lifting as a result" },
+        { date: "2026-09-01", text: "Pilates is such a game changer: it's given me a space to be more intentional with my movement and improve my mind to muscle connection." },
+        { date: "2026-08-01", text: "I have been loving Pilates!! Recently, I've been going before work and it is such a great start to my day. Getting my body moving before the work day and before the sun rises has been great for my energy levels throughout the day" },
+        { date: "2026-06-01", text: "Just started Pilates! I don't expect for it to be very hard because I've been lifting for years so I'm excited to try it out. I have a feeling I'll probably stop after a few months, especially because it is kind of expensive" }
       ]
     },
     {
